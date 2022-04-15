@@ -7,6 +7,35 @@ const handRock = "Rock";
 const handPaper = "Paper";
 const handScissors = "Scissors";
 
+let playerwin = 0;
+let computerwin = 0;
+
+//----------
+// create buttons
+//
+const buttons = document.querySelectorAll('button');
+
+//----------
+// Click a button
+//
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+      playRound(button.id, computerPlay());
+    });
+  });
+
+//----------
+// display score
+//
+const divplayerscore = document.querySelector('#playerscore');
+const divcomputerscore = document.querySelector('#computerscore');
+
+//----------
+// display results
+//
+const divResults = document.querySelector('#result');
+divResults.textContent = "";
+
 //----------
 // randomly return 'Rock', 'Paper' or 'Scissors'
 //
@@ -88,12 +117,30 @@ function playRound (playerSelection, computerSelection) {
     // return declaration of winner
     if (result == 'Win') {
         result = `You ${result}! ${playerSelection} beats ${computerSelection}.`;
+        if (playerwin < 4) {
+            playerwin++;
+        } else {
+            playerwin = 0;
+            computerwin = 0;
+            result += 'You have 5 wins.'
+        }
     } else if (result == 'Lose') {
         result = `You ${result}! ${computerSelection} beats ${playerSelection}.`;
+        if (computerwin < 4) {
+            computerwin++;
+        } else {
+            playerwin = 0;
+            computerwin = 0;
+            result += 'You lose 5 rounds.'
+        }
     } else {
-        result = `You ${result}.`;
+        result = `${result}.`;
     }
-    return result;
+
+    divplayerscore.textContent = playerwin;
+    divcomputerscore.textContent = computerwin;
+    divResults.textContent = result;
+
 }
 
 //----------
@@ -104,9 +151,10 @@ function capitalize(str1) {
     return str2;
 }
 
-//----------
+//---------- delete for implementing UI play mode
 // play a 5 round game
 //
+/*
 function game() {
 
     let playerSelection;
@@ -118,3 +166,4 @@ function game() {
         console.log(i + playRound(playerSelection, computerSelection));
     }
 }
+*/

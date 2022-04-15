@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+}
+
+h2 {
+    margin-top: 30px;
+}
+
+#score {
+    display: flex;
+    margin: 20px auto;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+#playerscore,
+#computerscore {
+    text-align: center;
+    padding: 10px;
+    width: 80px;
+    border: 1px solid black;
+}
+
+#result {
+    border: 1px solid black;
+    height: 100px;
+    width: 300px;
+    margin: 10px auto;
+}
