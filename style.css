@@ -1,29 +1,87 @@
 body {
+    margin: 0;
     text-align: center;
+    background-color: rgb(255, 233, 237);
 }
 
+a {
+    text-decoration: none;
+    color: hotpink;
+}
+  
+#header {
+    margin: 0;
+    padding: 6px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#title {
+    font-size: larger;
+    font-weight: bold;
+}
+
+#footer {
+    padding: 20px;
+}
+  
 h2 {
     margin-top: 30px;
 }
 
-#score {
+#playerselection {
+    width: 40%;
+    margin: 10px auto;
+    padding: 0 10px;
     display: flex;
-    margin: 20px auto;
     justify-content: space-evenly;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: hotpink;
+    color: white;
+    border: 3px solid white;
+    border-radius: 16px;
+    font-size: large;
+    font-weight: bolder;
+}
+button:hover {
+    background-color: white;
+    color: hotpink;
+    border-color: hotpink;
+}
+
+#score {
+    width: 40%;
+    margin: 10px auto;
+    padding: 0 10px;
+    display: flex;
+    justify-content: space-evenly;
+    flex: 0 0 auto;
     text-align: center;
 }
 
 #playerscore,
 #computerscore {
-    text-align: center;
-    padding: 10px;
     width: 80px;
-    border: 1px solid black;
+    padding: 10px;
+    background-color: white;
+    color: hotpink;
+    text-align: center;
+    font-size: larger;
+    font-weight: bold;
+    border: 3px solid hotpink;
+    border-radius: 16px;
 }
 
 #result {
-    border: 1px solid black;
     height: 100px;
-    width: 300px;
+    width: 280px;
     margin: 10px auto;
+    font-size: larger;
+    font-weight: bold;
 }

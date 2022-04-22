@@ -10,24 +10,37 @@
 </head>
 <body>
 
-    <h1>Let's play Rock Paper Scissors</h1>
-    <h2>Player selection</h2>
-    <p>Click a button to play.</p>
-    <button id="rock">Rock</button>
-    <button id="paper">Paper</button>
-    <button id="scissors">Scissors</button>
+    <div id="header">
+        <div id="title">Let's play Rock-Paper-Scissors</div>
+    </div>
 
-    <h2>Score</h2>
-    <div id="score">
-        <div>Player
-            <div id="playerscore">0</div>
+    <div id="container">
+
+        <div id="playerarea">
+            <h2>Player selection</h2>
+            <div id="playerselection">
+                <button id="rock">Rock</button>
+                <button id="paper">Paper</button>
+                <button id="scissors">Scissors</button>
+            </div>
         </div>
-        <div>Computer
-            <div id="computerscore">0</div>
+
+        <div id="scorearea">
+            <h2>Score</h2>
+            <div id="score">
+                <div>Player
+                    <div id="playerscore">0</div>
+                </div>
+                <div>Computer
+                    <div id="computerscore">0</div>
+                </div>
+            </div>
+            <div id="result"></div>
         </div>
     </div>
-    <p>Result</p>
-    <div id="result"></div>
 
+    <div id="footer">
+        &copy; <a href="https://github.com/codedlovely">@codedlovely</a>
+    </div>
 </body>
 </html>
